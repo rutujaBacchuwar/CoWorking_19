@@ -101,9 +101,9 @@ public class SpaceController {
         return  responseEntity;
     }
 
-    @GetMapping("space/{name}")
-    public ResponseEntity<Space> getByName(@PathVariable String name){
-        ResponseEntity responseEntity=new ResponseEntity<Space>(spaceService.findByName(name),HttpStatus.OK);
+    @GetMapping("/{name}")
+    public ResponseEntity<?> getByUserName(@PathVariable String name){
+        ResponseEntity responseEntity=new ResponseEntity<List<Space>>(spaceService.findByName(name),HttpStatus.OK);
         return responseEntity;
     }
 
