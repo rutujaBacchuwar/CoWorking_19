@@ -79,4 +79,11 @@ public class UserController {
         }
         return responseEntity;
     }
+
+    @GetMapping("/user/{name}")
+    public ResponseEntity<User> getByName(@PathVariable String name){
+        ResponseEntity responseEntity=new ResponseEntity<User>(userService.getByName(name),HttpStatus.OK);
+        return responseEntity;
+    }
+
 }

@@ -89,7 +89,7 @@ public class SpaceController {
         }
         return responseEntity;
     }
-    @DeleteMapping("space")
+    @DeleteMapping("space/{spaceId}")
     public ResponseEntity<?> deleteSpace(@PathVariable int spaceId){
         ResponseEntity responseEntity;
         try {
